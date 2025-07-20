@@ -191,7 +191,6 @@ return {
       ensure_installed = {
         "stylua",
         "black",
-        "gofmt",
         "shellcheck",
         "shfmt",
         "flake8",

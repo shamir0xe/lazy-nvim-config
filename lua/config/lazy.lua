@@ -25,6 +25,17 @@ require("lazy").setup({
       "folke/noice.nvim",
       event = "VeryLazy",
       opts = {
+        views = {
+          cmdline_popup = {
+            keymaps = {
+              -- This is where you configure Noice's command line
+              ["<C-k>"] = "scroll_up",
+              ["<C-j>"] = "scroll_down",
+              ["<C-h>"] = "scroll_left",
+              ["<C-l>"] = "scroll_right",
+            },
+          },
+        },
         lsp = {
           -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
           override = {

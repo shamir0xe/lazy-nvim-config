@@ -31,3 +31,13 @@ map("n", "<S-Enter>", "O<ESC>")
 
 -- No stupid paste after yanking
 map("v", "p", '"_dP')
+
+-- Remap for navigating command-line history
+map("c", "<C-j>", "<Down>", { desc = "Next in command history" })
+map("c", "<C-k>", "<Up>", { desc = "Previous in command history" })
+
+-- Remap for moving left and right in the command-line
+map("c", "<C-h>", "<Left>", { desc = "Move left" })
+map("c", "<C-l>", "<Right>", { desc = "Move right" })
+
+map("n", "<leader>at", "<cmd>CodeCompanionChat<cr>", { desc = "Toggle CodeCompanionChat" })

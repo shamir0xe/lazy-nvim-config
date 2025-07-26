@@ -9,3 +9,12 @@ local opt = vim.opt
 
 opt.autowrite = false
 opt.relativenumber = false
+
+-- LazyVim completion engine to use.
+-- Can be one of: nvim-cmp, blink.cmp
+-- Leave it to "auto" to automatically use the completion engine
+-- enabled with `:LazyExtras`
+vim.g.lazyvim_cmp = "blink.cmp"
+
+-- disable auto format
+vim.g.autoformat = false

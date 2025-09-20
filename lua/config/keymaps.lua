@@ -25,6 +25,7 @@ map("n", "<leader>b%", "<cmd>vsplit<cr>", { desc = "split the buffer to right" }
 map("n", '<leader>b"', "<cmd>split<cr>", { desc = "split the buffer to bot" })
 
 map("n", "<leader>ap", "<cmd>PyrightSetPythonPath ./.venv/bin/python3<cr>", { desc = "🐍 Set Pyright env path" })
+map("n", "<leader>an", "<cmd>LspPyrightSetPythonPath ./.venv/bin/python3<cr>", { desc = "🐍 Set Pyright env path - new" })
 
 map("n", "<Enter>", "o<ESC>")
 map("n", "<S-Enter>", "O<ESC>")

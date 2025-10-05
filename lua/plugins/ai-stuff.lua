@@ -37,7 +37,7 @@ return {
             return require("codecompanion.adapters").extend("anthropic", {
               url = "https://api.metisai.ir/api/v1/wrapper/anthropic/chat/completions",
               env = {
-                api_key = "cmd: echo -n $AVANTE_OPENAI_API_KEY", -- optional: if your endpoint is authenticated
+                api_key = "cmd: zsh -c 'echo -n ${AVANTE_OPENAI_API_KEY}'", -- optional: if your endpoint is authenticated
               },
               headers = {
                 ["Content-Type"] = "application/json",
@@ -55,7 +55,7 @@ return {
             return require("codecompanion.adapters").extend("openai_compatible", {
               env = {
                 url = "https://api.metisai.ir/openai/v1", -- optional: default value is ollama url http://127.0.0.1:11434
-                api_key = "cmd: echo -n $AVANTE_OPENAI_API_KEY", -- optional: if your endpoint is authenticated
+                api_key = "cmd: zsh -c 'echo -n ${AVANTE_OPENAI_API_KEY}'", -- optional: if your endpoint is authenticated
                 chat_url = "/chat/completions", -- optional: default value, override if different
                 models_endpoint = "/models", -- optional: attaches to the end of the URL to form the endpoint to retrieve models
               },

@@ -30,7 +30,7 @@ return {
           ["<C-k>"] = { "select_prev", "fallback" },
           ["<C-j>"] = { "select_next", "fallback" },
         },
-        sources = { "buffer", "cmdline" },
+        sources = { "buffer", "cmdline", "codeium" },
       },
       keymap = {
         preset = "enter",

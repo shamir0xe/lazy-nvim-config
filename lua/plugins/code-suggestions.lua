@@ -30,7 +30,7 @@ return {
           ["<C-k>"] = { "select_prev", "fallback" },
           ["<C-j>"] = { "select_next", "fallback" },
         },
-        sources = { "buffer", "cmdline", "codeium" },
+        sources = { "buffer", "cmdline" },
       },
       keymap = {
         preset = "enter",
@@ -38,6 +38,12 @@ return {
         ["<C-k>"] = { "select_prev", "fallback" },
         ["<C-j>"] = { "select_next", "fallback" },
         ["<CR>"] = { "accept", "fallback" },
+      },
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer", "codeium" },
+        providers = {
+          codeium = { name = "Codeium", async = true },
+        },
       },
     },
   },

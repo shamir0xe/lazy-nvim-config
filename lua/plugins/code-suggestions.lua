@@ -22,6 +22,19 @@ return {
   {
     "saghen/blink.cmp",
     opts = {
+      completion = {
+        keyword = { range = "prefix", regex = "[-_a-zA-Z0-9]" },
+        trigger = {
+          show_on_keyword = true,
+          show_on_trigger_character = true,
+        },
+        ghost_text = { enabled = true },
+        menu = {
+          draw = {
+            columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
+          },
+        },
+      },
       cmdline = {
         enabled = true,
         keymap = {
@@ -30,7 +43,10 @@ return {
           ["<C-k>"] = { "select_prev", "fallback" },
           ["<C-j>"] = { "select_next", "fallback" },
         },
-        sources = { "buffer", "cmdline" },
+        sources = {
+          -- "buffer",
+          "cmdline",
+        },
       },
       keymap = {
         preset = "enter",
@@ -40,11 +56,25 @@ return {
         ["<CR>"] = { "accept", "fallback" },
       },
       sources = {
-        default = { "lsp", "path", "snippets", "buffer", "codeium" },
+        default = {
+          "lsp",
+          "path",
+          "snippets",
+          -- "buffer",
+          -- "codeium",
+        },
         providers = {
-          codeium = { name = "Codeium", async = true },
+          -- codeium = { name = "Codeium", async = true },
         },
       },
     },
+  },
+  {
+    -- Codeium
+    -- "Exafunction/windsurf.vim",
+    -- event = "BufEnter",
+  },
+  {
+    "github/copilot.vim",
   },
 }

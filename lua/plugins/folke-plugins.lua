@@ -22,7 +22,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      -- colorscheme = "gruvbox",
+      colorscheme = "sequoia-insomnia",
     },
   },
 
@@ -71,6 +72,18 @@ return {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
         gopls = {},
+        helm_ls = {
+          settings = {
+            ['helm-ls'] = {
+              yamlls = {
+                -- The path to your YAML language server executable.
+                -- If you installed it with Mason, this is usually handled automatically.
+                -- If not, you might need to provide an absolute path.
+                path = "yaml-language-server",
+              }
+            }
+          }
+        },
       },
     },
   },

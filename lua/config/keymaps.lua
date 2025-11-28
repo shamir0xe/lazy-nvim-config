@@ -25,7 +25,12 @@ map("n", "<leader>b%", "<cmd>vsplit<cr>", { desc = "split the buffer to right" }
 map("n", '<leader>b"', "<cmd>split<cr>", { desc = "split the buffer to bot" })
 
 map("n", "<leader>ap", "<cmd>PyrightSetPythonPath ./.venv/bin/python3<cr>", { desc = "🐍 Set Pyright env path" })
-map("n", "<leader>an", "<cmd>LspPyrightSetPythonPath ./.venv/bin/python3<cr>", { desc = "🐍 Set Pyright env path - new" })
+map(
+  "n",
+  "<leader>an",
+  "<cmd>LspPyrightSetPythonPath ./.venv/bin/python3<cr>",
+  { desc = "🐍 Set Pyright env path - new" }
+)
 
 map("n", "<Enter>", "o<ESC>")
 map("n", "<S-Enter>", "O<ESC>")
@@ -42,3 +47,9 @@ map("t", "<C-h>", "<Left>", { desc = "Move left" })
 map("t", "<C-l>", "<Right>", { desc = "Move right" })
 
 map("n", "<leader>at", "<cmd>CodeCompanionChat<cr>", { desc = "Toggle CodeCompanionChat" })
+
+-- The <esc>k/j moving lines problem!
+vim.keymap.del("i", "<A-j>")
+vim.keymap.del("i", "<A-k>")
+vim.keymap.del("n", "<A-j>")
+vim.keymap.del("n", "<A-k>")

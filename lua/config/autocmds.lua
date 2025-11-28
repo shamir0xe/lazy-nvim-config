@@ -9,6 +9,7 @@
 
 -- vim.api.nvim_del_augroup_by_name("LazyFormat")
 
+-- Autocommand for the helm filetype detection
 local augroup = vim.api.nvim_create_augroup("HelmFiletype", { clear = true })
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufRead" }, {
@@ -30,3 +31,17 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufRead" }, {
     end
   end,
 })
+
+-- -- Autocommand for changing the highlighted color of hover windows
+-- local set_custom_hover_hl = function()
+--   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#282828", fg = "#ebdbb2" })
+--   vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#458588", bg = "#282828" })
+-- end
+--
+-- set_custom_hover_hl()
+--
+-- -- Use an autocmd to re-apply these highlights whenever you switch colorschemes
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--   pattern = "*",
+--   callback = set_custom_hover_hl,
+-- })

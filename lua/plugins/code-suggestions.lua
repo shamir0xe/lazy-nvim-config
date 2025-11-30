@@ -28,7 +28,7 @@ return {
           show_on_keyword = true,
           show_on_trigger_character = true,
         },
-        ghost_text = { enabled = true },
+        ghost_text = { enabled = false },
         menu = {
           draw = {
             columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },

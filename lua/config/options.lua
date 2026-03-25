@@ -9,6 +9,7 @@ local opt = vim.opt
 
 opt.autowrite = false
 opt.relativenumber = false
+opt.signcolumn = "yes:2"
 
 -- LazyVim completion engine to use.
 -- Can be one of: nvim-cmp, blink.cmp

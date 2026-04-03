@@ -22,7 +22,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "sequoia-insomnia",
+      colorscheme = "sequoia-main",
     },
   },
 

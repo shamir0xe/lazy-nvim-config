@@ -69,6 +69,11 @@ return {
       ---@type lspconfig.options
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
+        buf_ls = {
+          cmd = { 'buf', 'lsp', 'serve' },
+          filetypes = { 'proto' },
+          root_markers = { 'buf.yaml', '.git' },
+        },
         pyright = {},
         gopls = {},
         helm_ls = {

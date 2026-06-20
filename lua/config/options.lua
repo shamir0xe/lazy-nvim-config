@@ -19,3 +19,4 @@ vim.g.lazyvim_cmp = "blink.cmp"
 
 -- disable auto format
 vim.g.autoformat = false
+vim.opt.mousescroll = "ver:1,hor:0"
